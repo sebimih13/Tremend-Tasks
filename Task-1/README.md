@@ -139,10 +139,20 @@ ls
 
 ![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-1/resources/copy-test.PNG)
 
-# Run test.sh
+### Run test.sh
 ```sh
 bash test.sh
 ```
 
 ![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-1/resources/run-test.PNG)
+
+### Check new_passwd
+```sh
+ls
+```
+```sh
+cat new_passwd
+```
+
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-1/resources/check-newpasswd.PNG)
 
