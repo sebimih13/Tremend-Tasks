@@ -74,7 +74,7 @@ list_all_usernames_UID_range()
     fi
 
     # print users
-    getent passwd {$(($min_uid))..$(($max_uid))} | cut -d: -f1
+    eval "getent passwd {$min_uid..$max_uid} | cut -d: -f1"
 }
 
 # 6.
@@ -110,7 +110,7 @@ print_public_IP()
 # 10. 
 switch_user()
 {
-    su john
+    su john -c 'echo $HOME'
 }
 
 # check privileges
@@ -154,12 +154,9 @@ echo
 echo "print_public_IP:"
 print_public_IP
 echo
+echo
 
 echo "switch_user:"
 switch_user
-echo
-
-echo "print_home_directory:"
-print_home_directory
 echo
 
