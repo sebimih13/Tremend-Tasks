@@ -8,7 +8,7 @@ docker pull ubuntu:latest
 docker run -it --name my_linux_container ubuntu
 ```
 
-![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/Task-1/resources/Install-Ubuntu-Containter.PNG)
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-1/resources/Install-Ubuntu-Containter.PNG)
 
 ### Check current ubuntu version
 ```sh
@@ -18,7 +18,7 @@ ls
 cat /etc/os-release
 ```
 
-![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/Task-1/resources/current-ubuntu-version.PNG)
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-1/resources/current-ubuntu-version.PNG)
 
 ### Add a new user
 ```sh
