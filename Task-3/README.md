@@ -4,46 +4,51 @@
 1. Create Dockerfile
 2. Define Docker Container
 
-### Setup docker image and containter for mysql app
+### Setup docker image for mysql database
 ```sh
-docker build -t mysql_app .
+docker build -t mysql_db .
 ```
 
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/build-image.PNG)
+
+### Run mysql database container
 ```sh
-docker run -it --name mysql_app_container -v mysql:/var/lib/mysql mysql_app
+docker run -it --name mysql_db_container -v mysql:/var/lib/mysql mysql_db
 ```
 
-### Run container
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/container.PNG)
+
+<!-- ### Run container
 ```sh
-docker start -i mysql_app_container
-```
+docker start -i mysql_db_container
+``` -->
 
 ### Open another terminal
 ```sh
 docker container ls
 ```
 
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/admin-terminal.PNG)
+
 ### Connect to the database as Admin
 ```sh
-docker exec -it 802a3c389d50 /bin/bash
+docker exec -it 1b6a45353af4 /bin/bash
 ```
-
 ```sh
 ls
 ```
-
 ```sh
 cd docker-entrypoint-initdb.d
 ```
-
 ```sh
 ls
 ```
-
 ```sh
 mysql -u Admin -p
 Admin123
 ```
+
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/admin.PNG)
 
 ### Queries
 ```sh
@@ -70,10 +75,20 @@ select * from employees;
 select * from positions;
 ```
 
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/q-1.PNG)
+
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/q-2.PNG)
+
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/q-3.PNG)
+
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/q-4.PNG)
+
 ### Find the average salary for each department
 ```sh
-mysql> SELECT d.department_name, AVG(e.salary)   
+mysql> SELECT d.department_name, AVG(e.salary)
     -> FROM departments d JOIN employees e ON (d.department_id = e.department)
     -> GROUP BY d.department_name;
 ```
+
+![Install-Ubuntu-Containter](https://github.com/sebimih13/Tremend-Tasks/blob/main/Task-3/resources/q-5.PNG)
 
